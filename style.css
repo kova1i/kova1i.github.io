@@ -733,25 +733,30 @@ section {
 
 .nav-list {
   display: flex;
+  flex-wrap: nowrap;      /* Запретить перенос */
+  white-space: nowrap;    /* Запретить перенос текста */
+  align-items: center;
+  gap: var(--space-20);
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap;
-  gap: var(--space-20);
 }
 
 .nav-link {
-  white-space: nowrap;
-  color: var(--color-text);
-  text-decoration: none;
-  font-weight: var(--font-weight-medium);
+  display: block;
   padding: var(--space-10) var(--space-8);
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
   border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
   border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  /* Отключить перенос внутри ссылки */
+  white-space: nowrap;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--color-medical-blue);
   border-bottom: 2px solid var(--color-medical-blue);
   background-color: rgba(31, 184, 205, 0.1);
