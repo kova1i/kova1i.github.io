@@ -733,8 +733,8 @@ section {
 
 .nav-list {
   display: flex;
-  flex-wrap: nowrap;      /* Запретить перенос */
-  white-space: nowrap;    /* Запретить перенос текста */
+  flex-wrap: nowrap;
+  white-space: nowrap;
   align-items: center;
   gap: var(--space-20);
   list-style: none;
@@ -751,7 +751,6 @@ section {
   border-bottom: 2px solid transparent;
   border-radius: var(--radius-sm);
   transition: all 0.3s ease;
-  /* Отключить перенос внутри ссылки */
   white-space: nowrap;
 }
 
